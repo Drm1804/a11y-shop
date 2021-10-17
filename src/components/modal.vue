@@ -1,14 +1,14 @@
 <template>
   <div class="modal" @keyup.esc="click">
     <div class="mask" @click="click" ></div>
-    <div class="window" role="dilog" aria-modal="true" aria-labelledby="dilog-title">
+    <div class="window" role="dilog" >
       <div class="text">
-        <h3 id="dilog-title">
+        <h3>
           Товар {{ title }} добавлен в колрзину, продолжить покупки или перейти
           в корзину?
         </h3>
         <div class="contrls">
-          <button ref="first-button" @click="click">Продолжить покупки</button>
+          <button @click="click">Продолжить покупки</button>
           <button @click="click">В корзину</button>
         </div>
       </div>
@@ -21,9 +21,6 @@ export default {
   name: "Modal",
   props: {
     title: String,
-  },
-  mounted() {
-    this.$refs["first-button"].focus();
   },
   methods: {
     click() {

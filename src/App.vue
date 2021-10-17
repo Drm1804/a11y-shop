@@ -66,16 +66,12 @@ export default {
     },
   },
   methods: {
-    openModal(id, $event) {
+    openModal(id) {
       this.selectedItem = id;
       this.isModelShow = true;
-      this.previousFocus = $event.path[0];
-      this.$children.forEach((comp) => (comp.$el.inert = true));
     },
     closeModal() {
-      this.$children.forEach((comp) => (comp.$el.inert = false));
       this.isModelShow = false;
-      this.previousFocus.focus();
       this.previousFocus = null;
     },
   },

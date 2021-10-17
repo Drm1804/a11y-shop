@@ -3,7 +3,7 @@
     <h3>{{ title }}</h3>
 
     <div class="description">
-      <img :src="require(`../assets/${image}.jpeg`)" :alt="`Изображение товара ${title}`" />
+      <img :src="require(`../assets/${image}.jpeg`)" alt="" />
 
       <div class="text">
         <p>
@@ -14,7 +14,7 @@
         </p>
 
         <button @click="add($event)">
-          Добавить<span class="sc-only"> {{ title }}</span> в корзину
+          Добавить в корзину
         </button>
       </div>
     </div>
